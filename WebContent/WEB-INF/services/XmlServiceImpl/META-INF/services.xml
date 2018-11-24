@@ -1,0 +1,64 @@
+<service name="XmlServiceImpl" >
+	<Description>
+		Please Type your service description here
+	</Description>
+	
+<!-- 	<messageReceivers> -->
+<!-- 		<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" /> -->
+<!-- 		<messageReceiver  mep="http://www.w3.org/2004/08/wsdl/in-out"  class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/> -->
+<!-- 	</messageReceivers> -->
+
+<messageReceivers>
+		<messageReceiver mep="http://www.w3.org/ns/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+		<messageReceiver  mep="http://www.w3.org/ns/wsdl/in-out"  class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+</messageReceivers>
+	<parameter name="ServiceClass" locked="false">com.oyak.common.ws.XmlServiceImpl</parameter>
+
+
+<!-- START OF SECURITY PART -->
+
+<!-- <module ref="rampart"/> -->
+<!-- <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" wsu:Id="UTOverTransport"> -->
+<!-- <wsp:ExactlyOne> -->
+<!-- <wsp:All> -->
+<!-- <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"> -->
+<!-- <wsp:Policy> -->
+<!-- <sp:TransportToken> -->
+<!-- <wsp:Policy> -->
+<!-- <sp:HttpsToken RequireClientCertificate="false"/> -->
+<!-- </wsp:Policy> -->
+<!-- </sp:TransportToken> -->
+<!-- <sp:AlgorithmSuite> -->
+<!-- <wsp:Policy> -->
+<!-- <sp:Basic128/> -->
+<!-- </wsp:Policy> -->
+<!-- </sp:AlgorithmSuite> -->
+<!-- <sp:Layout> -->
+<!-- <wsp:Policy> -->
+<!-- <sp:Lax/> -->
+<!-- </wsp:Policy> -->
+<!-- </sp:Layout> -->
+<!-- <sp:IncludeTimestamp/> -->
+<!-- </wsp:Policy> -->
+<!-- </sp:TransportBinding> -->
+
+
+<!-- <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"> -->
+<!-- <wsp:Policy> -->
+<!-- <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient"/> -->
+<!-- </wsp:Policy> -->
+<!-- </sp:SignedSupportingTokens> -->
+
+<!-- <ramp:RampartConfig xmlns:ramp="http://ws.apache.org/rampart/policy">  -->
+<!--     <ramp:passwordCallbackClass>com.oyak.common.ws.PWCBHandler</ramp:passwordCallbackClass> -->
+<!-- </ramp:RampartConfig> -->
+
+<!-- </wsp:All> -->
+<!-- </wsp:ExactlyOne> -->
+<!-- </wsp:Policy> -->
+
+
+<!-- END OF SECURITY PART -->
+
+
+</service>
